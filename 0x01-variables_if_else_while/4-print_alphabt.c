@@ -1,11 +1,12 @@
 #include <stdio.h>
 /**
- * main- entry point
- * Return: 0 (success/correct)
- */
-int main(void) 
+ *main- entry point
+ *Return: 0 (success/correct)
+ **/
+int main(void)
 {
 	  char alphabet;
+
 	  for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
 	  {
 		  if (alphabet == 'q')
@@ -15,5 +16,5 @@ int main(void)
 		  putchar(alphabet);
 	  }
 	  putchar('\n');
-	      return 0;
+	      return (0);
 }
