@@ -1,38 +1,33 @@
 #include <stdio.h>
 /**
- * main - prints out all possible combos of 3 digits
- * Return: 0
- **/
+ *  * main-Entry point of the program
+ *   * Return:(0)
+ *   **/
 int main(void)
 {
-		int i, j, k;
+	int left;
+	int right;
+	int center;
 
-			for (i = 48; i < 58; i++)
-					{
-								for (j = i; j < 58; j++)
-											{
-															for (k = j; k < 58; k++)
-																			{
-																								if (i == j || j == k || i == k)
-																													{
-																																			continue;
-																																							}
-																												putchar(i);
-																																putchar(j);
-																																				putchar(k);
-																																								if (i == 55 && j == 56 && k == 57)
-																																													{
-																																																			break;
-																																																							{
-																																												else
-																																																	{
-																																																							putchar(',');
-																																																												putchar(' ');
-																																																															}
-																																															}
-																	}
-
-									}
-				putchar('\n');
-					return (0);
+	for (left = 48; left <= 57; left++)
+	{
+		for (center = left + 1; center <= 57; center++)
+		{
+			for (right = center + 1 ; right <= 57; right++)
+			{
+				putchar(left);
+				putchar (center);
+				putchar (right);
+				if  ((left == 55) && (center == left + 1) && (right == center + 1))
+				{
+					break;
+				}
+				putchar(',');
+				putchar (' ');
+			}
+		}
+	}
+	putchar('\n');
+	return (0);
+	    return 0;
 }
